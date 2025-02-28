@@ -30,13 +30,15 @@ function PropertyDetails() {
         alt={accommodation.title}
         className="cover-imageA"
       />
-      <h2 className="title">{accommodation.title}</h2>
-      <p className="vibe">{accommodation.vibe}</p>
-      <p className="price">
-        <strong>Beds:</strong> {accommodation.beds}
-      </p>
+      <div className="detailsP">
+        <h2 className="title">{accommodation.title}</h2>
+        <p className="vibe">{accommodation.vibe}</p>
+        <p className="price">
+          <strong>Beds:</strong> {accommodation.beds}
+       </p>
 
-      <button className="book-now">Book Now</button>
+        <button className="book-now">Book Now</button>
+      </div>
 
       {/* Tabs */}
       <div className="tabs">

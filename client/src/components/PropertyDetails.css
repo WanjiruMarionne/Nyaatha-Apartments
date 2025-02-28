@@ -1,8 +1,16 @@
-/* Tabs Container */
+.accommodation-details {
+  width: 100%;
+  height: fit-content;
+}
+
+.detailsP {
+  margin-left: 40%;
+}
+
 .tabs {
     display: flex;
-    justify-content: flex-start;
-    gap: 20px;
+    justify-content: space-around;
+    gap: 100px;
     border-bottom: 2px solid #ddd;
     margin-bottom: 20px;
   }
@@ -33,6 +41,7 @@
   
   .tab-content {
     padding: 20px 0;
+    margin-left: 6%;
   }
   
   /* Gallery Images */
@@ -42,16 +51,15 @@
     gap: 10px;
   }
   
-  .gallery-image {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
+.gallery-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
   
-  /* Reviews */
-  .review {
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-  }
+.review {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
   

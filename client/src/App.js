@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import ContactUs from "./components/ContactUs";
 import Accommodations from "./components/Accommodations";
 import PropertyDetails from "./components/PropertyDetails";
+import BookingPage from './components/BookingPage'
 import LoginSignup from "./components/LoginSignup";
 import "./App.css";
 
@@ -33,6 +34,7 @@ const App = () => {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/accommodations" element={<Accommodations />} />
         <Route path="/accommodation/:id" element={<PropertyDetails />} />
+        <Route path="/booking/:id" element={<BookingPage />} />
         <Route path="/loginsignup" element={<LoginSignup />} />
       </Routes>
 

@@ -86,7 +86,7 @@
   margin-top: 15px;
 }
 
-.enquire, .details {
+.bookA, .detailsA {
   padding: 10px 15px;
   font-size: 14px;
   font-weight: bold;
@@ -95,21 +95,23 @@
   border-radius: 5px;
 }
 
-.enquireA {
-  background: white;
-  border: 1px solid black;
+.bookA {
+  background: gold;
+  color: black;
+  border: 1px solid gold;
 }
 
 .detailsA {
-  background: gray;
-  color: white;
+  background: white;
+  border: 1px solid gold;
 }
 
-.enquire:hover {
+.bookA:hover {  
   background: black;
   color: white;
 }
 
-.details:hover {
-  background: darkgray;
+.detailsA:hover {
+  background: black;
+  color: white;
 }
