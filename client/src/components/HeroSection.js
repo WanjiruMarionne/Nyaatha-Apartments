@@ -1,37 +1,38 @@
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./HeroSection.css";
+import { Link } from 'react-router-dom';
 
 const slides = [
   {
-    image: "/assets/hero1.jpg",
-    title: "33 YEAR LEGACY",
+    image: "/images/Mercede/img1.jpg",
+    title: "THE PINNACLE OF URBAN LIVING",
     description:
-      "Driving lifestyle transformation and wealth creation through innovative real estate solutions.",
+      "Step into refined sophistication with sleek interiors and breathtaking views for a truly urban retreat.",
   },
   {
-    image: "/assets/hero2.jpg",
-    title: "Modern Living Spaces",
-    description: "Experience luxury and comfort with our state-of-the-art apartments.",
+    image: "/images/Anfo/img1.jpg",
+    title: "ELEVATED URBAN LIFESTYLE",
+    description: "An exquisite space designed for both relaxation and dynamic city living.",
   },
   {
-    image: "/assets/hero3.jpg",
-    title: "Prime Locations",
-    description: "Strategically located properties offering easy access to essential amenities.",
+    image: "/images/Gikondi/img3.jpg",
+    title: "DESIGNED FOR CONTEMPORARY LIVING",
+    description: "A thoughtfully curated space for everyday comfort, ideal for the modern traveler.",
   },
   {
-    image: "/assets/hero4.jpg",
-    title: "Secure & Gated Communities",
-    description: "Enjoy peace of mind with 24/7 security in our exclusive residences.",
+    image: "/images/Brescia/img3.jpg",
+    title: "ELEGANCE IN EVERY DETAIL",
+    description: "Every corner exudes charm and sophistication, making it an oasis of style and tranquility.",
   },
   {
-    image: "/assets/hero5.jpg",
-    title: "Invest in the Future",
-    description: "Real estate opportunities that ensure long-term value and returns.",
+    image: "/images/Jacoba/img2.jpg",
+    title: "REDEFINING MODERN LIVING",
+    description: "A  seamless blend of elegance and comfort, offering the perfect balance for contemporary lifestyles.",
   },
 ];
 
-const HeroSection = () => {
+const HeroSection = ({ accommodations }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -71,6 +72,22 @@ const HeroSection = () => {
         {slides.map((_, index) => (
           <span key={index} className={index === currentSlide ? "dot active" : "dot"}></span>
         ))}
+      </div>
+
+      <div className="search-bar">
+        <input type="date" className="search-input" placeholder="Check-in" />
+        <input type="date" className="search-input" placeholder="Check-out" />
+        <select className="search-input">
+          <option value="1">1 guest</option>
+          <option value="2">2 guests</option>
+          <option value="3">3 guests</option>
+          <option value="4">4 guests</option>
+          <option value="5">5 guests</option>
+          <option value="More than 5">More than 5 guests</option>
+        </select>
+        <Link to={`/accommodations`}>
+          <button className="search-button">Search &gt;</button>
+        </Link>
       </div>
     </header>
   );

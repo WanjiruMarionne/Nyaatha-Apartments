@@ -7,25 +7,19 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
-          <h3>About Us</h3>
-          <p>Providing top-tier commercial and residential spaces tailored to your needs.</p>
-        </div>
-
-        <div className="footer-section">
           <h3>Quick Links</h3>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">About Us</a></li>
             <li><a href="/accommodation">Accommodation</a></li>
-            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
 
         <div className="footer-section">
           <h3>Contact Us</h3>
-          <p>Email: info@nyaathaappartments.com</p>
-          <p>Phone: +123 456 7890</p>
-          <p>Location: Nairobi, Kenya</p>
+          <p>Email: info@nyaathaplaza.com</p>
+          <p>Phone: +254705690135</p>
+          <p>Location: Nyeri, Kenya</p>
         </div>
 
         <div className="footer-section social-section">
@@ -48,7 +42,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Nyaatha Appartments. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Nyaatha Plaza. All rights reserved.</p>
       </div>
     </footer>
   );

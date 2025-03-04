@@ -31,6 +31,7 @@
   width: 100%;
   height: 250px;
   object-fit: cover;
+  object-position: bottom;
   border-radius: 8px;
 }
 
@@ -56,6 +57,7 @@
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 5px;
+  text-align: left;
 }
 
 .location {

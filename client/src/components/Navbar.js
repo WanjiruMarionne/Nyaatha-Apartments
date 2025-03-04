@@ -9,16 +9,16 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-container">
+      <div className="navbar-container"
+        style={{ backgroundImage: `url(/assets/navbar.jpeg)`,backgroundSize: 'auto', backgroundPosition: 'center', opacity: '0.95'}} >
         <Link to="/" className="logo">
-          <img src="/assets/logo.jpeg" alt="Nyaatha Apartments Logo" className="logo-image" />
+          <img src="/assets/logo.png" alt="Nyaatha Apartments Logo" className="logo-image" />
         </Link>
 
         <div className="menu">
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/commercial-space" className="nav-link">Commercials</Link>
           <Link to="/accommodations" className="nav-link">Accommodations</Link>
-          <Link to="/about" className="nav-link">About</Link>
           <Link to="/help" className="nav-link">Help</Link>
           <Link to="/contact" className="nav-link">Contact</Link>
 

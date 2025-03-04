@@ -68,3 +68,103 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+/* AboutUs.css */
+.about-us-container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .about-us-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #256c98;
+    margin-bottom: 20px;
+  }
+  
+  .subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7FC31C;
+    margin-top: 30px;
+  }
+  
+  .about-div,
+  .mission,
+  .values,
+  .vision {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+  
+  .about-div img,
+  .mission img,
+  .values img,
+  .vision img {
+    width: 100%;
+    max-width: 500px; /* Set max width for uniformity */
+    height: 300px;  /* Set fixed height for all images */
+    object-fit: cover; /* Ensure images maintain their aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .description-about,
+  .description-mission,
+  .description-vision {
+    max-width: 600px;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .feature-item {
+    font-size: 1.1rem;
+    padding: 10px;
+    border-left: 4px solid #256c98;
+    margin-bottom: 10px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+
+  
+  @media (max-width: 768px) {
+    .about-div,
+    .mission,
+    .values,
+    .vision {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .description-about,
+    .description-mission,
+    .description-vision {
+      text-align: center;
+    }
+  }
+  

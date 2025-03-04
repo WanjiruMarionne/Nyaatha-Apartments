@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Accommodations.css';
 import { Link } from 'react-router-dom';
+import Footer from "./Footer";
 
 function Accommodations() {
   const [accommodations, setAccommodations] = useState([]);
@@ -15,6 +16,7 @@ function Accommodations() {
   }, []);
 
   return (
+    <div>
     <div className="accommodations">
       {accommodations.map((accommodation) => (
         <div key={accommodation.id} className="accommodation-card">
@@ -47,6 +49,8 @@ function Accommodations() {
           </div>
         </div>
       ))}
+    </div>
+    <Footer />
     </div>
   );
 }

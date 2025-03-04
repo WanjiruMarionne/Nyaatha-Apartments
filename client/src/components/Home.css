@@ -9,13 +9,14 @@
 .home-container {
   width: 100%;
   overflow-x: hidden;
-  background-color: #f8f9fa;
   text-align: center;
+  background-color: white;
 }
 
 /* Content Styling */
 .content-container {
-  padding: 20px;
+  width: 80%;
+  margin-left: 10%;
 }
 
 .home-title {
