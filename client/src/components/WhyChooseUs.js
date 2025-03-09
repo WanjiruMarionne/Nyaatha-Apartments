@@ -21,7 +21,7 @@ const WhyChooseUs = () => {
     {
       icon: '📍',
       title: 'Prime Location',
-      description: 'Close to shopping malls, schools, and transport links.',
+      description: 'At the heart of Nyeri close to supermarkets and transport links.',
     },
     {
       icon: '⭐',

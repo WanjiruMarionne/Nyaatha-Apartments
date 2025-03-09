@@ -3,19 +3,19 @@ import './Testimonials.css';
 
 const testimonialsData = [
   {
-    name: 'John Doe',
-    review: 'This property management system made my rental experience seamless and stress-free!',
-    image: '/assets/user1.jpg',
+    name: 'Name 1',
+    review: 'Great service by the team at Nyaatha.',
+    image: '/assets/testimonials.jpeg',
   },
   {
-    name: 'Jane Smith',
-    review: 'A user-friendly platform that ensures everything from payments to bookings runs smoothly!',
-    image: '/assets/user2.jpg',
+    name: 'Name 2',
+    review: 'Well furnished and great rooms!',
+    image: '/assets/testimonials.jpeg',
   },
   {
-    name: 'Michael Johnson',
-    review: 'Excellent service and support! I highly recommend it for all property owners.',
-    image: '/assets/user3.jpg',
+    name: 'Name 3',
+    review: 'Excellent service and support! I highly recommend it.',
+    image: '/assets/testimonials.jpeg',
   },
 ];
 

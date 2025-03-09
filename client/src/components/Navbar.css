@@ -1,3 +1,7 @@
+body {
+  padding-top: 70px; 
+}
+
 /* Navbar Container */
 .navbar {
   background-color: black;
@@ -6,12 +10,18 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 6px rgba(255, 215, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 95%;
 }
 
 .logo-image {
@@ -23,7 +33,7 @@
 .menu {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
   background: black;
   border-radius: 8px;
   opacity: 0.8;
@@ -100,7 +110,8 @@
   align-items: center;
   border: 1px solid gold;
   border-radius: 20px;
-  padding: 5px 10px;
+  padding: 1px 10px;
+  margin: 8px 0 8px 0;
   background: black;
 }
 
@@ -120,7 +131,7 @@
 .schedule-btn {
   background-color: gold;
   color: black;
-  padding: 8px 12px;
+  padding: 1px 8px;
   border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
@@ -128,6 +139,7 @@
   align-items: center;
   gap: 5px;
   transition: 0.3s;
+  margin-right: 8px;
 }
 
 .schedule-btn:hover {

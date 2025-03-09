@@ -58,13 +58,12 @@ function Booking({ accommodation, onBookingConfirm, bookedDates }) {
       return;
     }
 
-    // Create a deep copy of checkOutDate
     const copiedCheckOutDate = new Date(checkOutDate.getTime());
 
     onBookingConfirm({
       accommodationId: accommodation.id,
       checkInDate,
-      copiedCheckOutDate, // Pass the copied date
+      copiedCheckOutDate, 
       guestName,
       phoneNumber,
       email,
@@ -112,14 +111,12 @@ function Booking({ accommodation, onBookingConfirm, bookedDates }) {
               <img src={accommodation.cover_image} alt={accommodation.title} />
               <div className="details">
                 <h4>{accommodation.title}</h4>
-                <p>★5 (3 reviews)</p>
               </div>
-              <button className="more-details">More details</button>
             </div>
             <div className="rental-details">
               <p>Rental</p>
               <p>
-                KES {accommodation.price} x{' '}
+                {accommodation.price} x{' '}
                 {checkInDate && checkOutDate
                   ? Math.round((checkOutDate.getTime() - checkInDate.getTime()) / (1000 * 60 * 60 * 24))
                   : 0}
@@ -127,9 +124,6 @@ function Booking({ accommodation, onBookingConfirm, bookedDates }) {
               </p>
             </div>
             <div className="total-details">
-              <p>
-                <strong>Total (KES)</strong>
-              </p>
               <p>
                 <strong>KES {calculateTotal()}</strong>
               </p>

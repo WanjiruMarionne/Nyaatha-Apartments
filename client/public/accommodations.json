@@ -3,6 +3,7 @@
       {
         "id": 1,
         "title": "Mercede Suite",
+        "description": "Mercede, is one of Blessed Irene Stefani's baptismal names, resonates with the virtue of mercy (derived from 'Maria della Mercede,' meaning 'Mary of Mercy'). This room embodies her compassionate nature, her devotion to serving the sick, and her tender love for the suffering. It is a space of kindness, healing, and the selfless care she gave to those in need, mirroring her famous title 'Nyaatha' (Mother of Mercy).",
         "beds": "1-bedroom",
         "price": "Kes. 4,000/night",
         "vibe": "THE PINNACLE OF URBAN LIVING",
@@ -37,6 +38,7 @@
       {
         "id": 2,
         "title": "Anfo Suite",
+        "description": "Anfo, Italy, is the birthplace of Blessed Irene Stefani. This room represents the foundation of her journey; her childhood, faith formation, and the calling that led her to a life of service. It embodies simplicity, devotion, and the deep spiritual roots that guided her mission.",
         "beds": "2-bedroom.",
         "price": "Kes. 6,000/night",
         "vibe": "ELEVATED URBAN LIFESTYLE",
@@ -71,6 +73,7 @@
       {
         "id": 3,
         "title": "Jacoba Suite",
+        "description": "Named after one of Blessed Irene Stefani's baptismal names, Jacoba, this room symbolizes her identity as a child of faith, marked from infancy for a great mission. It reflects the strength and resilience she carried throughout her life, especially in overcoming challenges in her missionary work. Like St. James (San Jacobo), her name represents a pilgrim’s journey; steadfast and unwavering in service.",
         "beds": "2-bedroom",
         "price": "Kes. 6,000/night",
         "vibe": "REDEFINING MODERN LIVING",
@@ -105,6 +108,7 @@
       {
         "id": 4,
         "title": "Brescia Suite",
+        "description": "Brescia, Italy is where Blessed Irene Stefani was laid to rest, marking the completion of her earthly mission. This room represents the lasting legacy of her work—her beatification, the countless lives she touched, and the continued inspiration she provides for those who seek to live a life of faith and compassion.",
         "beds": "1-bedroom",
         "price": "Kes. 4,000/night",
         "vibe": "ELEGANCE IN EVERY DETAIL",
@@ -144,6 +148,7 @@
       {
         "id": 5,
         "title": "Gikondi Suite",
+        "description": "Gikondi, in Nyeri, Kenya, was the heart of her mission and where she became beloved by the local people. This room represents her deep connection with the Kikuyu community, her fluency in their language, and the tireless medical and pastoral work she carried out. It is a tribute to her humility, sacrificial love, and the legacy she left among the people of Kenya.",
         "beds": "1-bedroom",
         "price": "Kes. 4,000/night",
         "vibe": "DESIGNED FOR CONTEMPORARY LIVING",

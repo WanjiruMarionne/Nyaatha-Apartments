@@ -1,69 +1,74 @@
-.commercial-spaces-list {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-  }
-  
-  .commercial-spaces-list h2 {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-  
-  .spaces-container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  .commercial-space {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .commercial-space img {
-    width: 400px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .space-details {
-    flex: 1;
-  }
-  
-  .space-details h3 {
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  
-  .space-details p {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 8px;
-  }
-  
-  .enquire-button {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 2px solid #000;
-    background: transparent;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .enquire-button:hover {
-    background: black;
-    color: white;
-  }
-  
+.commercial-spaces {
+  font-family: Arial, sans-serif;
+  color: gold;
+  background-color: black;
+  text-align: center;
+}
+
+.hero {
+  padding: 60px 20px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.schedule-btn {
+  background: gold;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tenants-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.tenant-card {
+  background: rgba(255, 215, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.tenant-card img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.gallery-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.gallery-grid img {
+  width: 200px;
+  border-radius: 5px;
+}
+
+.contact {
+  padding: 20px;
+  background: rgba(255, 215, 0, 0.1);
+}

@@ -19,7 +19,6 @@ const Navbar = () => {
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/commercial-space" className="nav-link">Commercials</Link>
           <Link to="/accommodations" className="nav-link">Accommodations</Link>
-          <Link to="/help" className="nav-link">Help</Link>
           <Link to="/contact" className="nav-link">Contact</Link>
 
           {/* Profile Dropdown */}
@@ -39,10 +38,7 @@ const Navbar = () => {
             <input type="text" placeholder="Search..." />
             <Search className="search-icon" size={18} />
           </div>
-
-          <Link to="/schedule" className="schedule-btn">
-            <Calendar className="icon" size={18} /> Schedule Appointment
-          </Link>
+          
         </div>
 
         <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>

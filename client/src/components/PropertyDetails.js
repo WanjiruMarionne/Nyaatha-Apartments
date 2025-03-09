@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "./PropertyDetails.css";
+import Footer from "./Footer";
 
 function PropertyDetails() {
   const { id } = useParams();
   const [accommodation, setAccommodation] = useState(null);
   const [activeTab, setActiveTab] = useState("description");
+  const [selectedImage, setSelectedImage] = useState(null);
+const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     fetch("/accommodations.json")
       .then((response) => response.json())
       .then((data) => {
         const foundAccommodation = data.accommodations.find(
-          (acc) => acc.id === Number(id) // Ensure proper number comparison
+          (acc) => acc.id === Number(id) 
         );
         setAccommodation(foundAccommodation);
       })
@@ -23,12 +26,43 @@ function PropertyDetails() {
     return <div>Loading...</div>;
   }
 
+  const openLightbox = (index) => {
+    setCurrentImageIndex(index);
+    setSelectedImage(accommodation.images[index]);
+  };
+  
+  /*const closeLightbox = (e) => {
+    if (e.target.classList.contains("lightbox")) {
+      setSelectedImage(null);
+    }
+  };*/
+
+  const closeLightbox = () => {
+    setSelectedImage(null);
+  };
+  
+  const prevImage = (e) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? accommodation.images.length - 1 : prevIndex - 1
+    );
+    setSelectedImage(accommodation.images[currentImageIndex]);
+  };
+  
+  const nextImage = (e) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === accommodation.images.length - 1 ? 0 : prevIndex + 1
+    );
+    setSelectedImage(accommodation.images[currentImageIndex]);
+  };
+
   return (
-    <div className="accommodation-details">
-      <img
+    <div className="accommodation-booking">
+      <div className="property-details">
+      <img className="cover-image-property"
         src={accommodation.cover_image}
         alt={accommodation.title}
-        className="cover-imageA"
       />
       <div className="detailsP">
         <h2 className="title">{accommodation.title}</h2>
@@ -36,8 +70,10 @@ function PropertyDetails() {
         <p className="price">
           <strong>Beds:</strong> {accommodation.beds}
        </p>
-
-        <button className="book-now">Book Now</button>
+       <Link to={`/booking/${accommodation.id}`}>
+          <button className="bookA">Book Now</button>
+        </Link>
+      </div>
       </div>
 
       {/* Tabs */}
@@ -68,6 +104,17 @@ function PropertyDetails() {
         </button>
       </div>
 
+      {selectedImage !== null && (
+      <div className="lightbox" onClick={closeLightbox}>
+        <div className="lightbox-content">
+          <span className="close" onClick={closeLightbox}>&times;</span>
+          <button className="prev" onClick={prevImage}>&#10094;</button>
+          <img src={accommodation.images[currentImageIndex]} alt="Expanded View" />
+         <button className="next" onClick={nextImage}>&#10095;</button>
+       </div>
+      </div>
+)}
+
       {/* Active Tab Content */}
       <div className="tab-content">
         {activeTab === "description" && (
@@ -79,7 +126,6 @@ function PropertyDetails() {
 
         {activeTab === "gallery" && (
           <div className="gallery">
-            <h3>Photo Gallery</h3>
             {accommodation.images?.length > 0 ? (
               accommodation.images.map((image, index) => (
                 <img
@@ -87,12 +133,13 @@ function PropertyDetails() {
                   src={image}
                   alt={`gallery-${index}`}
                   className="gallery-image"
+                  onClick={() => openLightbox(index)}
                 />
-              ))
-            ) : (
-              <p>No images available.</p>
-            )}
-          </div>
+                ))
+                ) : (
+                <p>No images available.</p>
+             )}
+           </div>
         )}
 
         {activeTab === "price" && (
@@ -119,6 +166,7 @@ function PropertyDetails() {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   );
 }

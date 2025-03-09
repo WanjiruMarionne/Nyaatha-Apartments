@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Booking from './Booking';
+import Footer from './Footer';
 
 function BookingPage() {
   const { id } = useParams();
@@ -51,11 +52,14 @@ function BookingPage() {
   }
 
   return (
+    <div>
     <Booking
       accommodation={accommodation}
       onBookingConfirm={handleBookingConfirm}
       bookedDates={bookedDates[accommodation.id] || []}
     />
+    <Footer />
+    </div>
   );
 }
 

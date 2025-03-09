@@ -1,3 +1,150 @@
-.booking-calendar {
-    margin-top: 10px;
+.booking-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+  background: #111;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.booking-form {
+  margin-right: 30px;
+  flex: 1;
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(255, 215, 0, 0.3);
+}
+
+.date-pickers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-picker {
+  flex: 1;
+}
+
+.date-picker label {
+  font-weight: bold;
+  color: gold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid gold;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #333;
+  color: #fff;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+.reservation-summary {
+  width: 90%;
+  flex: 1;
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(255, 215, 0, 0.3);
+}
+
+.reservation-summary h3 {
+  font-size: 22px;
+  color: gold;
+  border-bottom: 2px solid gold;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Accommodation Details */
+.accommodation-details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.accommodation-details img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid gold;
+}
+
+.accommodation-details h4 {
+  font-size: 18px;
+  color: gold;
+}
+
+/* Rental Details */
+.rental-details, .total-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.total-details strong {
+  font-size: 20px;
+  color: gold;
+}
+
+/* Guest Details */
+.guest-details p {
+  margin: 5px 0;
+}
+
+/* Confirm Booking Button */
+.confirm-booking {
+  width: 100%;
+  padding: 12px;
+  background: gold;
+  color: #000;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.confirm-booking:hover {
+  background: #d4af37;
+}
+
+/* Confirmation Message */
+.confirmation-message {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(255, 215, 0, 0.2);
+  border-radius: 8px;
+  text-align: center;
+  color: gold;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .booking-link {
+    flex-direction: column;
   }
+
+  .booking-form, .reservation-summary {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

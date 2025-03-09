@@ -29,20 +29,23 @@
 /* Property Cards */
 .property-carousel {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 10px 0;
   width: 100%;
+  white-space: nowrap;
 }
 
 .property-gallery {
   display: flex;
   gap: 20px;
   padding: 10px;
+  min-width: max-content;
 }
 
 .property-card {
+  flex: 0 0 300px;
   background: white;
   border-radius: 12px;
   overflow: hidden;
