@@ -5,7 +5,7 @@ body {
 /* Navbar Container */
 .navbar {
   background-color: black;
-  padding: 15px;
+  padding: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,12 +20,13 @@ body {
 .navbar-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 95%;
+  justify-content: flex-start;
+  width: 98%;
+  margin-right: 2%;
 }
 
 .logo-image {
-  width: 120px;
+  width: 125px;
   height: auto;
 }
 
@@ -35,8 +36,10 @@ body {
   align-items: center;
   gap: 40px;
   background: black;
-  border-radius: 8px;
+  border-radius: 28px;
   opacity: 0.8;
+  margin-left: 20px;
+  width: 85%;
 }
 
 .nav-link {
@@ -111,8 +114,11 @@ body {
   border: 1px solid gold;
   border-radius: 20px;
   padding: 1px 10px;
-  margin: 8px 0 8px 0;
+  margin: 3px 0 3px 0;
   background: black;
+}
+.searching{
+  
 }
 
 .search-box input {

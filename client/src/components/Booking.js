@@ -114,7 +114,7 @@ function Booking({ accommodation, onBookingConfirm, bookedDates }) {
               </div>
             </div>
             <div className="rental-details">
-              <p>Rental</p>
+              <p>Price: </p>
               <p>
                 {accommodation.price} x{' '}
                 {checkInDate && checkOutDate

@@ -35,10 +35,11 @@ const Navbar = () => {
           </div>
 
           <div className="search-box">
-            <input type="text" placeholder="Search..." />
+
+            <input type="text" placeholder="Search..." className="searching"/>
             <Search className="search-icon" size={18} />
           </div>
-          
+
         </div>
 
         <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
@@ -51,7 +52,7 @@ const Navbar = () => {
         <div className="mobile-menu">
           <Link to="/" className="mobile-link" onClick={() => setIsOpen(false)}>Home</Link>
           <Link to="/commercial-space" className="mobile-link" onClick={() => setIsOpen(false)}>Commercial</Link>
-          <Link to="/accommodation" className="mobile-link" onClick={() => setIsOpen(false)}>Accommodation</Link>
+          <Link to="/accommodations" className="mobile-link" onClick={() => setIsOpen(false)}>Accommodation</Link>
           <Link to="/about" className="mobile-link" onClick={() => setIsOpen(false)}>About</Link>
           <Link to="/help" className="mobile-link" onClick={() => setIsOpen(false)}>Help</Link>
           <Link to="/contact" className="mobile-link" onClick={() => setIsOpen(false)}>Contact</Link>

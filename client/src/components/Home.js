@@ -42,7 +42,10 @@ const Home = () => {
       </div>
 
       <div className="content-container">
+        <div className='featured'>
         <h1 className="home-title new-features-title">Featured Listings</h1>
+        </div>
+        
 
         {/* Property Cards Carousel */}
         <div className="property-carousel" ref={scrollRef}>
