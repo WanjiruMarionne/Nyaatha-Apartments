@@ -1,0 +1,51 @@
+.recent-listing-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+  
+  .recent-listing-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .recent-listing-list {
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  .recent-listing-item {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .recent-listing-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+  
+  .recent-listing-details {
+    padding: 10px;
+  }
+  
+  .recent-listing-item-title {
+    font-size: 1em;
+    margin: 0;
+  }
+  
+  .recent-listing-item-location {
+    font-size: 0.8em;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .recent-listing-item-price {
+    font-weight: bold;
+  }     

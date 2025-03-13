@@ -1,0 +1,19 @@
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(13, 13, 13, 0.5);
+  }
+
+  .summary-icon {
+    font-size: 40px;
+    color: #d3a51d;
+  }

@@ -34,12 +34,6 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className="search-box">
-
-            <input type="text" placeholder="Search..." className="searching"/>
-            <Search className="search-icon" size={18} />
-          </div>
-
         </div>
 
         <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
@@ -68,6 +62,10 @@ const Navbar = () => {
                 <Link to="/logout" className="dropdown-item" onClick={() => setIsProfileOpen(false)}>Logout</Link>
               </div>
             )}
+          </div>
+          <div className="signup">
+          <Link to="/signup" className="signup-btn">Sign Up</Link>
+
           </div>
 
           <div className="search-box">

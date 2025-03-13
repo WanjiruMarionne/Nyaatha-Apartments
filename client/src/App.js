@@ -10,6 +10,15 @@ import Accommodations from "./components/Accommodations";
 import PropertyDetails from "./components/PropertyDetails";
 import BookingPage from './components/BookingPage'
 import LoginSignup from "./components/LoginSignup";
+import Signup from "./components/Signup";
+import Sidebar from "./components/Sidebar";
+import AdminNavbar from "./components/AdminNavbar";
+import Dashboard from "./components/Dashboard";
+import Properties from "./components/Properties";
+import Tenants from "./components/Tenants";
+import Bookings from "./components/Bookings";
+import Financials from "./components/Financials";
+import Maintenance from "./components/Maintenance";
 import "./App.css";
 
 const App = () => {
@@ -36,6 +45,13 @@ const App = () => {
         <Route path="/accommodation/:id" element={<PropertyDetails />} />
         <Route path="/booking/:id" element={<BookingPage />} />
         <Route path="/loginsignup" element={<LoginSignup />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/properties" element={<Properties />} />
+        <Route path="/tenants" element={<Tenants />} />
+        <Route path="/bookings" element={<Bookings />} />
+        <Route path="/financials" element={<Financials />} />
+        <Route path="/maintenance" element={<Maintenance />} />
       </Routes>
 
       {/* Show LoginSignup as a modal when showLogin is true */}

@@ -20,7 +20,7 @@ body {
 .navbar-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   width: 98%;
   margin-right: 2%;
 }
@@ -34,12 +34,13 @@ body {
 .menu {
   display: flex;
   align-items: center;
-  gap: 40px;
+  justify-content: center;
+  gap: 50px;
   background: black;
   border-radius: 28px;
   opacity: 0.8;
-  margin-left: 20px;
-  width: 85%;
+  margin-left: 60px;
+  width: 80%;
 }
 
 .nav-link {
@@ -47,7 +48,7 @@ body {
   color: gold;
   font-weight: 500;
   font-size: 16px;
-  padding: 8px 12px;
+  padding: 10px 30px;
   transition: 0.3s;
 }
 
@@ -117,14 +118,11 @@ body {
   margin: 3px 0 3px 0;
   background: black;
 }
-.searching{
-  
-}
 
 .search-box input {
   border: none;
   outline: none;
-  padding: 5px;
+  padding: 1px;
   background: transparent;
   color: gold;
 }

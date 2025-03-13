@@ -1,0 +1,49 @@
+.dashboard {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .stats-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .stat-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  .charts-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .chart {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .activity-log {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .activity-log ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .activity-log li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+  }

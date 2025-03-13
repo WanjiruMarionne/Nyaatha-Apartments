@@ -1,0 +1,49 @@
+.sidebar-container {
+    width: 250px;
+    background-color: #282c34;
+    color: white;
+    padding: 20px;
+    height: 100vh; 
+    position: fixed;
+    left: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    display: flex;
+    flex-direction: column;  
+    gap: 15px; 
+  }
+  
+  .admin-links {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    display: block; 
+  }
+  
+  .admin-links:hover {
+    background-color: #383e4a;
+  }
+  
+  .sidebar-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .sidebar-nav-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .sidebar-nav-item:hover {
+    background-color: #383e4a;
+  }
+  
+  .sidebar-nav-item.active {
+    background-color: #5a6270;
+  }

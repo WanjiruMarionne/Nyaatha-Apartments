@@ -167,4 +167,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
       text-align: center;
     }
   }
+
+   <div className="search-box">
+            <input type="text" placeholder="Search..." className="searching"/>
+            <Search className="search-icon" size={18} />
+          </div>
   
