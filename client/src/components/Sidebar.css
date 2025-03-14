@@ -6,6 +6,7 @@
     height: 100vh; 
     position: fixed;
     left: 0;
+    top: 110px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;

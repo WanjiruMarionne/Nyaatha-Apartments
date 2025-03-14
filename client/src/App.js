@@ -17,13 +17,20 @@ import Dashboard from "./components/Dashboard";
 import Properties from "./components/Properties";
 import Tenants from "./components/Tenants";
 import Bookings from "./components/Bookings";
-import Financials from "./components/Financials";
+import FinancePropertyManagement from "./components/FinancePropertyManagement";
+import CommercialsManagement from "./components/CommercialsManagement";
 import Maintenance from "./components/Maintenance";
 import "./App.css";
+import { DataProvider } from './components/DataContext';
 
 const App = () => {
   const location = useLocation();
   const [showLogin, setShowLogin] = useState(false);
+
+  <DataProvider>
+      <CommercialsManagement />
+      <FinancePropertyManagement />
+    </DataProvider>
 
   // Hide Navbar on these routes
   const hideNavbarRoutes = ["/loginsignup"];
@@ -50,7 +57,8 @@ const App = () => {
         <Route path="/properties" element={<Properties />} />
         <Route path="/tenants" element={<Tenants />} />
         <Route path="/bookings" element={<Bookings />} />
-        <Route path="/financials" element={<Financials />} />
+        <Route path="/financials" element={<FinancePropertyManagement />} />
+        <Route path="/commercials-management" element={<CommercialsManagement />} />
         <Route path="/maintenance" element={<Maintenance />} />
       </Routes>
 

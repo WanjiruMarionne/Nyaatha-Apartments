@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .finance-container {
+    max-width: 900px;
+    margin: auto;
+    margin-left: 310px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .title {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Buttons */
+  .finance-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: rgb(160, 143, 44);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background-color: gray;
+  }
+  
+  .save-btn {
+    background-color: #28a745;
+  }
+  
+  .save-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Modal Styling */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background: white;
+    color: black;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .modal h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .modal input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+  }
+  
+  /* Table Styling */
+  .table-container {
+    margin-top: 20px;
+  }
+  
+  h2 {
+    color: #333;
+    border-bottom: 2px solid goldenrod;
+    padding-bottom: 5px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 10px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background: black;
+    color: white;
+  }
+  
+  td button {
+    background-color: #28a745;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  
+  td button:hover {
+    background-color: #218838;
+  }
+  
+  /* Paid Status */
+  .paid {
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: bold;
+  }
+  
+  /* Income Statement */
+  .income-statement {
+    margin-top: 20px;
+  }
+  
+  .income-statement table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .income-statement td {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .positive {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .negative {
+    color: red;
+    font-weight: bold;
+  }
+
+  .finance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .finance-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .filter-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .filter-section label {
+    font-weight: bold;
+  }
+
+  .filter-section input[type="date"] {
+    width: 120px;  
+    padding: 5px;
+    font-size: 14px;
+    margin-top: 50px;
+  }
+
+  .due-date {
+    display: flex;
+    flex-direction: row;
+  }
+  
