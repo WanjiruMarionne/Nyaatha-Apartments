@@ -1,35 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './Booking.css';
 
-function Booking({ accommodation, onBookingConfirm, bookedDates }) {
+function Booking({ accommodation, onBookingConfirm }) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
   const [checkInDate, setCheckInDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
   const [guestName, setGuestName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [email, setEmail] = useState('');
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
+  const [bookedDates, setBookedDates] = useState([]);
 
-  const calculateTotal = () => {
-    if (checkInDate && checkOutDate && accommodation && accommodation.price) {
-      const priceString = accommodation.price;
-      const numericPrice = parseFloat(priceString.replace(/[^0-9.-]+/g, '')); // Extract numeric part
-      const nights = Math.round((checkOutDate.getTime() - checkInDate.getTime()) / ( 6 * 60 * 24));
-      return numericPrice * nights;
+  // Load booked dates from local storage on component mount
+  useEffect(() => {
+    const storedBookings = localStorage.getItem('bookedDates');
+    if (storedBookings) {
+      setBookedDates(JSON.parse(storedBookings));
     }
-    return 0;
-  };
+  }, []);
 
+  // Function to check if a date is already booked
   const isDateBooked = (date) => {
     return bookedDates.some(
       (bookedDate) =>
-        date.getFullYear() === bookedDate.getFullYear() &&
-        date.getMonth() === bookedDate.getMonth() &&
-        date.getDate() === bookedDate.getDate()
+        date.getFullYear() === new Date(bookedDate).getFullYear() &&
+        date.getMonth() === new Date(bookedDate).getMonth() &&
+        date.getDate() === new Date(bookedDate).getDate()
     );
   };
 
+  // Custom day content styling for booked dates
   const dayContent = (day) => {
     const date = day.toDate();
     if (isDateBooked(date)) {
@@ -44,34 +48,86 @@ function Booking({ accommodation, onBookingConfirm, bookedDates }) {
         </div>
       );
     } else {
-      return (
-        <div>
-          {day.getDate()}
-        </div>
-      );
+      return <div>{day.getDate()}</div>;
     }
   };
 
+  // Get all dates in range (check-in to check-out)
+  const getDatesInRange = (startDate, endDate) => {
+    const dates = [];
+    let currentDate = new Date(startDate);
+    while (currentDate <= endDate) {
+      dates.push(new Date(currentDate));
+      currentDate.setDate(currentDate.getDate() + 1);
+    }
+    return dates;
+  };
+
+  // Confirm booking and store in local storage
   const handleConfirm = () => {
     if (!checkInDate || !checkOutDate || !guestName || !phoneNumber || !email) {
-      alert('Please fill in all details.');
-      return;
+        alert('Please fill in all details.');
+        return;
     }
 
     const copiedCheckOutDate = new Date(checkOutDate.getTime());
 
-    onBookingConfirm({
-      accommodationId: accommodation.id,
-      checkInDate,
-      copiedCheckOutDate, 
-      guestName,
-      phoneNumber,
-      email,
-      totalCost: calculateTotal(),
-    });
+    const newBooking = {
+        accommodationId: accommodation.id,
+        checkInDate,
+        copiedCheckOutDate,
+        guestName,
+        phoneNumber,
+        email,
+        totalCost: calculateTotal(),
+    };
+
+    // Update booked dates list and save to local storage
+    const updatedBookedDates = [
+        ...bookedDates,
+        ...getDatesInRange(checkInDate, copiedCheckOutDate),
+    ];
+    setBookedDates(updatedBookedDates);
+    localStorage.setItem('bookedDates', JSON.stringify(updatedBookedDates));
+
+    onBookingConfirm(newBooking);
 
     setBookingConfirmed(true);
-    console.log('WhatsApp message sent to:', phoneNumber);
+
+    // Generate WhatsApp message link with Mercedes Suite details
+    const whatsappNumber = "254727662910"; // Kenya country code (254) included
+    const suiteLink = `https://yourwebsite.com/accommodation/${accommodation.id}`; // Replace with actual suite URL
+    const reservationSummary = `*Booking Confirmed!* 🎉
+
+🏨 *Accommodation:* ${accommodation.title}
+📅 *Check-in:* ${checkInDate.toLocaleDateString()}
+📅 *Check-out:* ${checkOutDate.toLocaleDateString()}
+👤 *Guest Name:* ${guestName}
+📞 *Phone:* ${phoneNumber}
+✉️ *Email:* ${email}
+💰 *Total Cost:* KES ${calculateTotal()}
+
+🔗 *View Details:* ${suiteLink}
+
+Click below to confirm:
+${window.location.href}`;
+
+    const whatsappLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(reservationSummary)}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappLink, "_blank");
+};
+
+
+  // Total Calculation (UNCHANGED)
+  const calculateTotal = () => {
+    if (checkInDate && checkOutDate && accommodation && accommodation.price) {
+      const priceString = accommodation.price;
+      const numericPrice = parseFloat(priceString.replace(/[^0-9.-]+/g, '')); // Extract numeric part
+      const nights = Math.round((checkOutDate.getTime() - checkInDate.getTime()) / (6 * 60 * 24));
+      return numericPrice * nights;
+    }
+    return 0;
   };
 
   return (
@@ -86,7 +142,7 @@ function Booking({ accommodation, onBookingConfirm, bookedDates }) {
                   selected={checkInDate}
                   onChange={(date) => setCheckInDate(date)}
                   dayContent={dayContent}
-                  filterDate={(date) => !isDateBooked(date)}
+                  filterDate={(date) => date >= today && !isDateBooked(date)}
                 />
               </div>
               <div className="date-picker">
@@ -96,6 +152,7 @@ function Booking({ accommodation, onBookingConfirm, bookedDates }) {
                   onChange={(date) => setCheckOutDate(date)}
                   dayContent={dayContent}
                   minDate={checkInDate ? new Date(checkInDate.getTime() + 86400000) : null}
+                  filterDate={(date) => date > checkInDate && !isDateBooked(date)}
                 />
               </div>
             </div>

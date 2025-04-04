@@ -32,10 +32,10 @@ function Accommodations() {
             <p className="vibe"> | {accommodation.vibe}</p>
             <div className="property-info">
               <p>
-                <strong>BEDS</strong> {accommodation.beds}
+                <strong>BEDS:</strong> {accommodation.beds}
               </p>
               <p>
-                <strong>PRICE</strong> {accommodation.price}
+                <strong>PRICE:</strong> {accommodation.price}
               </p>
             </div>
             <div className="buttons">

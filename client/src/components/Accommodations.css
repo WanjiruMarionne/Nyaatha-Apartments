@@ -104,7 +104,7 @@
 }
 
 .detailsA {
-  background: white;
+  background: black;
   border: 1px solid gold;
 }
 
@@ -114,6 +114,6 @@
 }
 
 .detailsA:hover {
-  background: black;
-  color: white;
+  background: gold;
+  color: black;
 }

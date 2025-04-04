@@ -3,7 +3,7 @@ import './KeyMetrics.css'; // Create a CSS file for styling
 
 const KeyMetrics = () => {
   const metrics = [
-    { title: 'Number of Businesses', value: 'Over 20 businesses' },
+    { title: 'Number of Businesses', value: 'Over 20' },
     { title: 'Daily visitors', value: 'Over 200' },
     { title: 'Residential Bookings This Month', value: 235},
     { title: 'Customer Satisfaction', value: '96%' },

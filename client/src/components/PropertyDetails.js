@@ -77,7 +77,7 @@ const [currentImageIndex, setCurrentImageIndex] = useState(0);
       </div>
 
       {/* Tabs */}
-      <div className="tabs">
+      <div className="property-tabs">
         <button
           className={activeTab === "description" ? "active" : ""}
           onClick={() => setActiveTab("description")}
